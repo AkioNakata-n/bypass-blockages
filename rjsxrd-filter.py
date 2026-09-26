@@ -1,6 +1,7 @@
 import json
 import urllib.request
 from pathlib import Path
+from urllib.parse import unquote
 
 
 CONFIG_FILE = "rjsxrd-filter-config.json"
@@ -27,7 +28,9 @@ def get_server_name(line):
     if "#" not in line:
         return ""
 
-    return line.split("#", 1)[1].strip()
+    name = line.split("#", 1)[1]
+    
+    return unquote(name).strip()
 
 
 def contains_any(text, patterns):
