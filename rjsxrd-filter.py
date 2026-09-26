@@ -3,7 +3,7 @@ import urllib.request
 from pathlib import Path
 
 
-CONFIG_FILE = "config.json"
+CONFIG_FILE = "rjsxrd-filter-config.json"
 
 
 def load_config():
@@ -45,7 +45,7 @@ def main():
     source_url = config["source"]
     include = config.get("include", [])
     exclude = config.get("exclude", [])
-    output_file = config.get("output", "filtered.txt")
+    output_file = config.get("output", "rjsxrd-filter.txt")
 
     source = download_source(source_url)
 
