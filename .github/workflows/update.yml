@@ -1,0 +1,35 @@
+name: Update filtered subscription
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Run filter
+        run: python filter.py
+
+      - name: Save changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add rjsxrd-filter.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update filtered subscription"
+            git push
+          fi
