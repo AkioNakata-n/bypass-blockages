@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run filter
-        run: python filter.py
+        run: python rjsxrd-filter.py
 
       - name: Save changes
         run: |
