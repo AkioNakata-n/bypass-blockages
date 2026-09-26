@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 
-CONFIG_FILE = "rjsxrd-config.json"
+CONFIG_FILE = "rjsxrd-filter-config.json"
 
 
 # Поддерживаемые протоколы серверов
