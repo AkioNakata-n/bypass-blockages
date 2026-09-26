@@ -1,1 +1,1 @@
-# bypass-alockages
+# bypass-blockages
