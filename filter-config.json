@@ -1,0 +1,22 @@
+{
+  "source": "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt",
+
+  "include": [
+    "VLESSFORU",
+  ],
+
+  "exclude": [
+    "",
+  ],
+
+  "metadata" {
+    "profile-title": "Aki0",
+    "profile-update-interval": "1",
+    "support-url": "https://t.me/rjsxrd",
+    "profile-web-page-url": "https://github.com/whoahaow/rjsxrd",
+    "announce": "AmneziaWG 3.1 · 33 config",
+    "announce-url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt"
+  },
+
+  "output": "rjsxrd-filter.txt"
+}
