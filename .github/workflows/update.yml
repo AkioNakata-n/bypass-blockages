@@ -1,9 +1,14 @@
 name: Update rjsxrd-filter subscription
+
 on:
   schedule:
     - cron: "40 * * * *"
-  
+
   workflow_dispatch:
+
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -29,6 +34,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Update filtered subscription"
+            git commit -m "Update rjsxrd-filter subscription"
             git push
           fi
