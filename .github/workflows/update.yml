@@ -1,9 +1,9 @@
 name: Update rjsxrd-filter subscription
-# test
 on:
   schedule:
     - cron: "40 * * * *"
-
+  timezone: "Asia/Aqtobe"
+  
   workflow_dispatch:
 
 permissions:
