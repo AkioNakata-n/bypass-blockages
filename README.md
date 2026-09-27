@@ -36,10 +36,10 @@ ETH: `0x17D7206EBfba1F0b6b65E99ACbd294827D9A79B1`
 
 ---
 
-### Мои подписки:
+### ➖ Мои подписки:
 
-**[🕊️ Aki0](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/rjsxrd-filter.txt)**
-ㅤ **[☁️ llimonix](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/AWG-3.1_llimonix.txt)**
+ㅤ ㅤ   ㅤ ㅤ ㅤ **[🕊️ Aki0](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/rjsxrd-filter.txt)**
+ㅤ ㅤ ㅤ **[☁️ llimonix](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/AWG-3.1_llimonix.txt)**
 
 ---
 
