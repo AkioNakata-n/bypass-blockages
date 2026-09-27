@@ -2,7 +2,7 @@ name: Update rjsxrd-filter subscription
 
 on:
   schedule:
-    - cron: "39 15 * * *"
+    - cron: "44 15 * * *"
 
   workflow_dispatch:
 
