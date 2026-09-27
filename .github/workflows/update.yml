@@ -1,4 +1,4 @@
-name: Update filtered subscription
+name: Update rjsxrd-filter subscription
 
 on:
   schedule:
