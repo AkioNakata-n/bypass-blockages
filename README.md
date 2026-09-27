@@ -1,10 +1,24 @@
 > **Language:** [Русский](README.md) · [English](README.en.md)
 
-#  - Автоматически обновляемые VPN-конфиги на основне rjsxrd
+#  Aki0 - Автоматически обновляемые VPN-конфиги на основне rjsxrd, llimonix и WARP Generator
+
+## rjsxrd:
 
 tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 
 github: [whoahaow/rjsxrd](https://github.com/whoahaow/rjsxrd)
+
+## llimonx:
+
+tgc: [t.me/findllimonix](https://t.me/findllimonix)
+
+bot: [@warp_generator_bot](https://t.me/@warp_generator_bot)
+
+site: [WARP Generator by llmonix](https://warp3.llimonix.pw/)
+
+## WARP Generator:
+
+site: [WARP Generator](https://warp-generation.github.io/)
 
 ---
 
@@ -17,6 +31,13 @@ USDT (TRC20): `TTgMgXWZKFpzqXL7mPfchvjovMHKaGyea4`
 BTC: `bc1q8s5snc95w3696taw5du9gnz6uf33wjz3yrq5e6`
 
 ETH: `0x17D7206EBfba1F0b6b65E99ACbd294827D9A79B1`
+
+---
+
+### Мои подписки:
+
+**[🕊️ Aki0](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/rjsxrd-filter.txt)**
+ㅤ **[☁️ llimonix](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/AWG-3.1_llimonix.txt)**
 
 ---
 
