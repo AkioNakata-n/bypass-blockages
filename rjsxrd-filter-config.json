@@ -4,7 +4,8 @@
   "include": [
     "VLESSFORU",
     "RaViraNet",
-    "AetrisVPN"
+    "AetrisVPN",
+    "vlesstrojan"
   ],
 
   "exclude": [
