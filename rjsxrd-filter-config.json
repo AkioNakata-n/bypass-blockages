@@ -4,9 +4,7 @@
   "include": [
     "VLESSFORU",
     "RaViraNet",
-    "AetrisVPN",
-    "[Обход БС]",
-    "[Не обход БС]"
+    "AetrisVPN"
   ],
 
   "exclude": [
