@@ -7,7 +7,6 @@ from urllib.parse import unquote
 CONFIG_FILE = "rjsxrd-filter-config.json"
 
 
-# Поддерживаемые протоколы серверов
 PROTOCOLS = (
     "vless://",
     "vmess://",
@@ -40,21 +39,10 @@ def download_source(url):
 
 
 def is_server(line):
-    """Проверяет, является ли строка серверной конфигурацией."""
     return line.lower().startswith(PROTOCOLS)
 
 
 def get_server_name(line):
-    """
-    Получает название сервера после #.
-    URL-кодирование декодируется.
-
-    Например:
-    %F0%9F%87%B3%F0%9F%87%B1
-    ->
-    🇳🇱
-    """
-
     if "#" not in line:
         return ""
 
@@ -65,8 +53,8 @@ def get_server_name(line):
 
 def contains_any(text, patterns):
     """
-    Проверяет, содержит ли текст хотя бы один
-    из указанных шаблонов.
+    True, если text содержит хотя бы один
+    непустой шаблон из patterns.
     """
 
     if not patterns:
@@ -75,6 +63,9 @@ def contains_any(text, patterns):
     text = text.lower()
 
     for pattern in patterns:
+        if not pattern:
+            continue
+
         if pattern.lower() in text:
             return True
 
@@ -83,35 +74,17 @@ def contains_any(text, patterns):
 
 def main():
 
-    # ============================================
-    # CONFIG
-    # ============================================
-
     config = load_config()
 
     source_url = config["source"]
-
     include = config.get("include", [])
     exclude = config.get("exclude", [])
-
-    output_file = config.get(
-        "output",
-        "rjsxrd-filter.txt"
-    )
-
-    # ============================================
-    # DOWNLOAD
-    # ============================================
+    output_file = config.get("output", "rjsxrd-filter.txt")
 
     print("Скачивание источника...")
 
     source = download_source(source_url)
-
     raw_lines = source.splitlines()
-
-    # ============================================
-    # SERVER COLLECTION
-    # ============================================
 
     priority = []
     others = []
@@ -128,69 +101,48 @@ def main():
 
         line = raw_line.strip()
 
-        # Пустые строки
         if not line:
             continue
 
-        # ----------------------------------------
-        # Проверяем сервер
-        # ----------------------------------------
-
+        # Только реальные серверные строки
         if not is_server(line):
             skipped_lines += 1
             continue
 
         total_servers += 1
 
-        # ----------------------------------------
-        # Удаляем точные дубликаты
-        # ----------------------------------------
-
+        # Точные дубликаты
         if line in seen:
             duplicate_servers += 1
             continue
 
         seen.add(line)
 
-        # ----------------------------------------
-        # Получаем имя сервера
-        # ----------------------------------------
-
+        # Название/remark сервера
         name = get_server_name(line)
 
-        # ----------------------------------------
         # EXCLUDE
-        # ----------------------------------------
-
         if contains_any(name, exclude):
             excluded_servers += 1
             continue
 
-        # ----------------------------------------
-        # INCLUDE
-        # ----------------------------------------
-
+        # INCLUDE = приоритет, а не фильтр
         if contains_any(name, include):
             priority.append(line)
         else:
             others.append(line)
 
     # ============================================
-    # OUTPUT
+    # METADATA
     # ============================================
 
     output = []
 
     metadata = config.get("metadata", {})
 
-    # --------------------------------------------
-    # Metadata
-    # --------------------------------------------
-
     if metadata.get("profile-title"):
         output.append(
-            f"#profile-title: "
-            f"{metadata['profile-title']}"
+            f"#profile-title: {metadata['profile-title']}"
         )
 
     if metadata.get("profile-update-interval"):
@@ -201,8 +153,7 @@ def main():
 
     if metadata.get("support-url"):
         output.append(
-            f"#support-url: "
-            f"{metadata['support-url']}"
+            f"#support-url: {metadata['support-url']}"
         )
 
     if metadata.get("profile-web-page-url"):
@@ -213,32 +164,28 @@ def main():
 
     if metadata.get("announce"):
         output.append(
-            f"#announce: "
-            f"{metadata['announce']}"
+            f"#announce: {metadata['announce']}"
         )
 
     if metadata.get("announce-url"):
         output.append(
-            f"#announce-url: "
-            f"{metadata['announce-url']}"
+            f"#announce-url: {metadata['announce-url']}"
         )
 
     output.append("")
 
-    # --------------------------------------------
-    # Сначала приоритетные
-    # --------------------------------------------
+    # ============================================
+    # СЕРВЕРЫ
+    # ============================================
 
+    # Сначала Германия / Нидерланды / Финляндия
     output.extend(priority)
 
-    # --------------------------------------------
-    # Затем остальные
-    # --------------------------------------------
-
+    # Потом все остальные
     output.extend(others)
 
     # ============================================
-    # WRITE FILE
+    # СОХРАНЕНИЕ
     # ============================================
 
     Path(output_file).write_text(
@@ -247,7 +194,7 @@ def main():
     )
 
     # ============================================
-    # STATISTICS
+    # СТАТИСТИКА
     # ============================================
 
     final_count = len(priority) + len(others)
