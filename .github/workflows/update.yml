@@ -2,7 +2,7 @@ name: Update filtered subscription
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "40 * * * *"
 
   workflow_dispatch:
 
