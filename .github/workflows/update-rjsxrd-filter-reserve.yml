@@ -1,0 +1,32 @@
+name: Update rjsxrd-filter-reserve subscription
+
+on:
+  schedule:
+    - cron: "35,40,45,50,55 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * *"
+  
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Run filter
+        run: python rjsxrd-filter-reserve.py
+
+      - name: Save changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add rjsxrd-filter-reserve.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update rjsxrd-filter-reserve subscription"
+            git push
+          fi
