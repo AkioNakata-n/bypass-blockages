@@ -18,5 +18,5 @@
     "announce-url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt"
   },
 
-  "output": "rjsxrd-filter-reserve.txt"
+  "output": "subscriptions/rjsxrd/rjsxrd-filter-reserve.txt"
 }
