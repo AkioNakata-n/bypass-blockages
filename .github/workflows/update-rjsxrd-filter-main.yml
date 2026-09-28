@@ -15,14 +15,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run filter
-        run: python /subscriptions/rjsxrd/rjsxrd-filter-main.py
+        run: python subscriptions/rjsxrd/rjsxrd-filter-main.py
 
       - name: Save changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add /subscriptions/rjsxrd/rjsxrd-filter-main.txt
+          git add subscriptions/rjsxrd/rjsxrd-filter-main.txt
 
           if git diff --cached --quiet; then
             echo "No changes"
