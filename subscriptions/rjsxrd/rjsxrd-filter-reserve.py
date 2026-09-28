@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import unquote, unquote_plus
 
 
-CONFIG_FILE = "rjsxrd-filter-reserve-config.json"
+CONFIG_FILE = "subscriptions/rjsxrd/rjsxrd-filter-reserve-config.json"
 
 
 PROTOCOLS = (
@@ -283,7 +283,7 @@ def main():
 
     output_file = config.get(
         "output",
-        "rjsxrd-filter-reserve.txt"
+        "subscriptions/rjsxrd/rjsxrd-filter-reserve.txt"
     )
 
     print("Скачивание источника...")
