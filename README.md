@@ -48,14 +48,19 @@ ETH: `0x17D7206EBfba1F0b6b65E99ACbd294827D9A79B1`
 ### Структура репозитория
 ```text
 .github/
- ├─ workflows
- └─  └─ update.yml
-AWG-3.1_llimonix.txt
+ ├─ workflows/
+ │   └─ update.yml
+ ├─ subscriptions/
+ │   ├─ AWG-3.1_llimonix.txt
+ │   └─ rjsxrd/
+ │       ├─ rjsxrd-filter-main-config.json
+ │       ├─ rjsxrd-filter-main.py
+ │       ├─ rjsxrd-filter-main.txt
+ │       ├─ rjsxrd-filter-reserve-config.json
+ │       ├─ rjsxrd-filter-reserve.py
+ └─      └─ rjsxrd-filter-reserve.txt
 README.en.md
 README.md
-rjsxrd-filter-config.json
-rjsxrd-filter.py
-rjsxrd.txt
 ```
 ---
 
