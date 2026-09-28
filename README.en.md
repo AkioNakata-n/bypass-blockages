@@ -49,7 +49,8 @@ ETH: `0x17D7206EBfba1F0b6b65E99ACbd294827D9A79B1`
 ```text
 .github/
  ├─ workflows/
- │   └─ update.yml
+ │   ├─ update-rjsxrd-filter-main.yml
+ │   └─ update-rjsxrd-filter-reserve.yml
  ├─ subscriptions/
  │   ├─ AWG-3.1_llimonix.txt
  │   └─ rjsxrd/
