@@ -12,12 +12,12 @@
   ],
 
   "metadata": {
-    "profile-title": "🕊️ Aki0",
+    "profile-title": "🕊️ Aki0 | main",
     "profile-update-interval": "1",
     "support-url": "https://t.me/rjsxrd",
     "profile-web-page-url": "https://github.com/whoahaow/rjsxrd",
     "announce-url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt"
   },
 
-  "output": "rjsxrd-filter.txt"
+  "output": "rjsxrd-filter-main.txt"
 }
