@@ -1,5 +1,5 @@
 #profile-title: ☁️ llimonix
-#support-url: https://t.me/findllimonix?direct
+#support-url: https://relay.tribukvy.ltd/activate/a310e66c272c49da
 #profile-web-page-url: https://warp-generation.github.io/
 #announce-url: https://t.me/warp_generator_bot
 
