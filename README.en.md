@@ -40,7 +40,6 @@ ETH: `0x17D7206EBfba1F0b6b65E99ACbd294827D9A79B1`
 
 **[🕊️ Aki0](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/subscriptions/rjsxrd/rjsxrd-filter-main.txt)**
   **[🕊️ Aki0 | reserve](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/subscriptions/rjsxrd/rjsxrd-filter-reserve.txt)**
-ㅤ  **[☁️ llimonix](https://raw.githubusercontent.com/AkioNakata-n/bypassing-blockages/refs/heads/main/subscriptions/AWG-3.1_llimonix.txt)**
 
 ---
 
